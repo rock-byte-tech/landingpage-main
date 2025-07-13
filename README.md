@@ -115,7 +115,9 @@ netlify deploy --prod dist/   # ejemplo Netlify CLI
 
 ---
 
-## 📄 Licencia
+## 📄 Licencia
 
-MIT © 2025 Rock Byte Tech
+Este proyecto es propiedad de Rock Byte Tech.  
+Todos los derechos reservados © 2025.  
+No está permitido su uso, copia o redistribución sin autorización escrita.
 
