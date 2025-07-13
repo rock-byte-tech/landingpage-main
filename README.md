@@ -1,52 +1,121 @@
-# Astro Starter Kit: Basics
+# Rock Byte Tech – Landing Page
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+> **Stack:** Astro + Tailwind CSS · AOS (scroll animations) · Typed.js (máquina de escribir) · Vanilla‑Tilt (parallax 3D) · Hero video background · Deployed on any static host
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Características Clave
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+| Módulo              | Descripción                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| **Hero**            | Video a pantalla completa, texto dinámico con Typed.js, efecto 3D Tilt y CTA destacado |
+| **Header flotante** | Transparente/blur, enlaces ancla y botón primario (CTA)                                |
+| **Secciones**       | Servicios, Por qué elegirnos, Testimonios, Contacto – todas con animaciones AOS        |
+| **Responsive**      | Mobile‑first, Tailwind utility classes                                                 |
+| **Constantes**      | `src/const/constants.js` para URLs, textos y colores reutilizables                     |
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🗂 Estructura del Proyecto
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── src/
+│   ├── assets/
+│   │   ├── logo/
+│   │   │   └── logo-principal-blanco.webp
+│   │   └── video/
+│   │       └── background-video-v2.mp4
+│   ├── const/
+│   │   └── constants.js
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── components/
+│   │   ├── Header.astro
+│   │   └── HeroAnimated.astro
+│   └── pages/
+│   │   └── index.astro
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+\* Puede usar **CDN** o instalar por `npm`. Ejemplo CDN en `index.astro`:
 
-## 🧞 Commands
+```html
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+```
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Instalación & Scripts
 
-## 👀 Want to learn more?
+```bash
+pnpm install           # instala dependencias
+pnpm dev               # servidor local en http://localhost:4321
+pnpm build             # genera `dist/` para producción
+pnpm preview           # previsualiza la build
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Dependencias principales
+
+```json
+{
+  "dependencies": {
+    "astro": "^5",
+    "tailwindcss": "^4",
+  },
+  "devDependencies": {
+    "aos": "^2",
+    "typed.js": "^2",
+    "vanilla-tilt": "^1"
+  }
+}
+```
+
+*Para prototipos se recomienda CDN; para producción crítica instala con **``** y haga importación ESM.*
+
+---
+
+## 🛠 Configuración Rápida
+
+1. **Constantes globales**
+   ```js
+   // src/const/constants.js
+   ```
+2. **Tailwind**: Config extendido en `tailwind.config.js` para estilos personalizadas.
+3. **Animaciones AOS**: agrega `data-aos="fade-up"` (u otro) a cualquier elemento. Para animaciones más vanzadas y con detención de viewport.
+4. **Typed.js**: en `HeroAnimated.astro` se inicializa sobre `#hero-text`.
+5. **Vanilla‑Tilt**: basta con `data-tilt` sobre el contenedor; opciones extra vía atributos `data-tilt-*`. Efectos avanzados.
+
+---
+
+## 🌐 Deploy
+
+El resultado de `pnpm build` es 100 % estático ⇒ **compatible con**: Netlify, Vercel, GitHub Pages, Cloudflare Pages, Hostinger, etc.
+
+```bash
+pnpm build
+netlify deploy --prod dist/   # ejemplo Netlify CLI
+```
+
+---
+
+## 📚 Fuentes & Recursos
+
+- [Astro Docs](https://docs.astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
+- [AOS – Animate On Scroll](https://michalsnik.github.io/aos/)
+- [Typed.js](https://mattboldt.github.io/typed.js/)
+- [Vanilla‑Tilt.js](https://micku7zu.github.io/vanilla-tilt.js/)
+- Video comprimido con [HandBrake](https://handbrake.fr/)
+
+---
+
+## 📄 Licencia
+
+MIT © 2025 Rock Byte Tech
+

@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "@midudev/tailwind-animations";
+
+p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: monospace;
+    font-weight: bold;
+}

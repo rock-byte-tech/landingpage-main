@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import 'aos/dist/aos.css';
 ---
 
 <!doctype html>
@@ -9,10 +10,21 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Rock Byte Tech</title>
 	</head>
 	<body class="bg-[#0A0A0A] text-white font-sans scroll-smooth">
 		<slot />
+	<!-- Load VanillaTilt.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+<!-- Load AOS library -->
+	<script>
+		import AOS from "aos";
+		AOS.init({
+			once: false,        // Para que se animen cada vez que entran en viewport
+			duration: 1000,     // Tiempo de la animación en milisegundos
+			offset: 100         // Cuánto antes empieza la animación
+		});
+    </script>
 	</body>
 </html>
 

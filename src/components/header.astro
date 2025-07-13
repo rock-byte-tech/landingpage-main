@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
+---
+
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-black/30 border-b border-white/10">
+  <div class="animate-slide-in-top max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="#" class="text-[#00FFC6] text-xl font-bold tracking-wide hover:opacity-80 transition">
+      <Image class="h-10 w-auto" src={logoPrincipalBlanco} alt="Logo principal Rock Byte Tech" />
+    </a>
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+      <a href="#servicios" class="text-white hover:text-[#00FFC6] transition">Servicios</a>
+      <a href="#por-que" class="text-white hover:text-[#00FFC6] transition">¿Por qué elegirnos?</a>
+      <a href="#testimonios" class="text-white hover:text-[#00FFC6] transition">Testimonios</a>
+      <a href="#contacto" data-tilt data-tilt-scale="1.1" class="bg-[#00FFC6] text-black px-4 py-2 rounded-lg hover:bg-white transition">Contáctanos</a>
+    </nav>
+  </div>
+</header>
+
