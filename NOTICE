@@ -1,0 +1,7 @@
+Este proyecto utiliza las siguientes librerías externas bajo licencia MIT:
+
+- AOS – https://github.com/michalsnik/aos
+- Typed.js – https://github.com/mattboldt/typed.js
+- Vanilla-Tilt – https://github.com/micku7zu/vanilla-tilt.js
+- TailwindCSS – https://github.com/tailwindlabs/tailwindcss
+- Astro – https://github.com/withastro/astro
