@@ -1,3 +1,8 @@
+---
+import GeneralServiciosWeb from '../assets/general/img-service-web.webp';
+import { Image } from 'astro:assets';
+--- 
+ 
  <section class="py-20 px-6 bg-[#111]" id="servicios">
     <div class="max-w-6xl mx-auto" data-aos="fade-up">
       <h2 class="text-3xl font-semibold text-center mb-12 text-[#00FFC6]">¿Qué hacemos en Rock Byte Tech?</h2>
@@ -36,7 +41,7 @@
           </div>
           <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
             <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-              <img class="size-full object-cover object-top" src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png" alt="" />
+              <Image class="size-full object-cover object-top" src={GeneralServiciosWeb} alt="" />
             </div>
           </div>
         </div>
