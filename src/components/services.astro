@@ -42,76 +42,76 @@ const datosJsonEjemplo = {
 ---
 
 <section class="px-6 bg-[#111]" id="servicios">
-  <div class="bg-[#111] py-24 sm:py-32">
+  <div class="bg-[#111] py-24 sm:py-32 overflow-x-hidden">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
       <h2 class="text-center text-base/7 font-semibold text-[#00FFC6]" data-aos="fade-up">Servicios</h2>
       <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl" data-aos="fade-up" data-aos-delay="50">¿Qué hacemos?</p>
-    <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-      <div class="relative lg:row-span-2" data-aos="fade-right" data-aos-delay="100">
-        <div class="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl border border-gray-700"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Desarrollo Web</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Creamos páginas web a la medida: desde landing pages hasta portales completos, con tecnologías modernas como WordPress, Astro, Angular y .NET, entre otras.</p>
-            </div>
-            <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-              <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                <Image class="size-full object-cover object-top " src={GeneralServiciosWeb} alt="imagen web" />
+      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div class="relative lg:row-span-2" data-aos="fade-right" data-aos-delay="100">
+          <div class="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl border border-gray-700"></div>
+            <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Desarrollo Web</p>
+                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Creamos páginas web a la medida: desde landing pages hasta portales completos, con tecnologías modernas como WordPress, Astro, Angular y .NET, entre otras.</p>
               </div>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl"></div>
-        </div>
-      <div class="relative max-lg:row-start-1" data-aos="fade-left" data-aos-delay="200">
-        <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl border border-gray-700"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-          <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Apps a Medida</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Desarrollamos aplicaciones personalizadas con un backend confiable y conexión a APIs, diseñadas para que tu negocio funcione de manera eficiente.</p>
-          </div>
-          <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-            <Image class="w-full max-lg:max-w-xs rounded-lg" src={GeneralServiciosWebApp} alt="" />
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl"></div>
-      </div>
-      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2" data-aos="fade-up" data-aos-delay="300">
-        <div class="absolute inset-px rounded-lg bg-gray-800 border border-gray-700"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-          <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Seguridad e Infraestructura</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Hosting, backups, configuración segura y soporte técnico.</p>
-          </div>
-          <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-            <Image class="h-[min(152px,40cqw)] object-cover bg-gray-500 rounded-lg" src={GeneralServiciosSecurity} alt="" />
-          </div>
-        </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5"></div>
-      </div>
-      <div class="relative lg:row-span-2" data-aos="fade-left" data-aos-delay="400">
-        <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl border border-gray-700"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-          <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Automatización</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Optimizamos tus procesos con flujos automáticos, integrando tus sistemas mediante n8n para que tu negocio gane eficiencia y ahorro de tiempo.</p>
-          </div>
-          <div class="relative min-h-120 w-full grow">
-            <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl outline outline-white/10">
-              <div class="flex bg-gray-900 outline outline-white/5 border border-gray-700">
-                <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                  <div class="border-r border-b border-r-white/10 border-b-white/20 bg-gray-800/5 px-4 py-2 text-white">GetData.json</div>
-                  <div class="border-r border-gray-600/10 px-4 py-2">Notification.json</div>
+              <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                  <Image class="size-full object-cover object-top " src={GeneralServiciosWeb} alt="imagen web" />
                 </div>
               </div>
-              <div class="px-6 pt-6 pb-14">
-                <pre>{ JSON.stringify(datosJsonEjemplo, null, 2) }</pre>
+            </div>
+            <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl"></div>
+          </div>
+        <div class="relative max-lg:row-start-1" data-aos="fade-left" data-aos-delay="200">
+          <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl border border-gray-700"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Apps a Medida</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Desarrollamos aplicaciones personalizadas con un backend confiable y conexión a APIs, diseñadas para que tu negocio funcione de manera eficiente.</p>
+            </div>
+            <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+              <Image class="w-full max-lg:max-w-xs rounded-lg" src={GeneralServiciosWebApp} alt="" />
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm o utline outline-black/5 max-lg:rounded-t-4xl"></div>
+        </div>
+        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute inset-px rounded-lg bg-gray-800 border border-gray-700"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Seguridad e Infraestructura</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Hosting, backups, configuración segura y soporte técnico.</p>
+            </div>
+            <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+              <Image class="h-[min(152px,40cqw)] object-cover bg-gray-500 rounded-lg" src={GeneralServiciosSecurity} alt="" />
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5"></div>
+        </div>
+        <div class="relative lg:row-span-2" data-aos="fade-left" data-aos-delay="400">
+          <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl border border-gray-700"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Automatización</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Optimizamos tus procesos con flujos automáticos, integrando tus sistemas mediante n8n para que tu negocio gane eficiencia y ahorro de tiempo.</p>
+            </div>
+            <div class="relative min-h-120 w-full grow">
+              <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl outline outline-white/10">
+                <div class="flex bg-gray-900 outline outline-white/5 border border-gray-700">
+                  <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                    <div class="border-r border-b border-r-white/10 border-b-white/20 bg-gray-800/5 px-4 py-2 text-white">GetData.json</div>
+                    <div class="border-r border-gray-600/10 px-4 py-2">Notification.json</div>
+                  </div>
+                </div>
+                <div class="px-6 pt-6 pb-14">
+                  <pre>{ JSON.stringify(datosJsonEjemplo, null, 2) }</pre>
+                </div>
               </div>
             </div>
           </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
         </div>
-        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
       </div>
-    </div>
   </div>
 </div>
 </section>

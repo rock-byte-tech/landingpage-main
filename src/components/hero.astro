@@ -1,72 +1,80 @@
 ---
 import { Image } from 'astro:assets';
 import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco-solo-letras.webp';
-import backgroundVideo from '../assets/video/background-video.mp4';
-import backgroundVideoV2 from '../assets/video/background-video-v2.mp4';
+import backgroundVideoV2 from '../assets/video/background-video-v2-fixed.mp4';
 import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
-
 ---
 
-<section  class="animate-fade-in relative pt-32 min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+<section class="animate-fade-in relative pt-24 md:pt-32 min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
 
   <!-- Video de fondo -->
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    preload="auto"
+    class="absolute top-0 left-0 w-full h-full object-cover z-0">
     <source src={backgroundVideoV2} type="video/mp4" />
     Tu navegador no soporta videos HTML5.
   </video>
 
   <!-- Contenido encima del video -->
-  <div class="relative z-10" data-tilt data-tilt-reset="true"  data-tilt-scale="1.1">
-    <div class="mb-8 flex justify-center" data-aos="fade-down">
-      <Image class="h-48 w-auto" src={logoPrincipalBlanco} alt="Logo principal Rock Byte Tech" />
+  <div class="relative z-10" data-tilt data-tilt-reset="true" data-tilt-scale="1.05">
+    <div class="mb-6 md:mb-8 flex justify-center" data-aos="fade-down">
+      <Image 
+        class="h-28 w-auto md:h-48" 
+        src={logoPrincipalBlanco} 
+        alt="Logo principal Rock Byte Tech" 
+      />
     </div>
-    <div class="text-xl md:text-2xl mb-6 max-w-2xl text-white">
-        <span id="hero-text" ></span>
+    <div class="text-lg sm:text-xl md:text-2xl mb-4 md:mb-6 max-w-sm sm:max-w-md md:max-w-2xl text-white">
+      <span id="hero-text"></span>
     </div>
-    <p class="text-lg text-gray-300 mb-8 max-w-xl" data-aos="fade-up">Desarrollo web, software personalizado y soporte de calidad para tu negocio.</p>
+    <p class="text-base sm:text-lg text-gray-300 mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl px-2" data-aos="fade-up">
+      Desarrollo web, software personalizado y soporte de calidad para tu negocio.
+    </p>
 
-<div data-aos="fade-up">
-    <a  href={URL_CALENDLY} target="_blank" class="bg-[#00FFC6] text-black text-[20px] font-bold px-6 py-3 rounded-lg hover:bg-amber-50 hover:shadow-[0_0_15px_#00FFC6] hover:scale-105 transform transition">
+    <div data-aos="fade-up">
+      <a  
+        href={URL_CALENDLY} 
+        target="_blank" 
+        class="bg-[#00FFC6] text-black text-base sm:text-lg md:text-xl font-bold px-5 sm:px-6 py-3 rounded-lg hover:bg-amber-50 hover:shadow-[0_0_15px_#00FFC6] hover:scale-105 transform transition"
+      >
         {CTA_LLAMADA}
-    </a>
-</div>
+      </a>
+    </div>
+  </div>
 
-</div>
+  <!-- Flecha de scroll -->
+  <div class="absolute bottom-6 md:bottom-10 z-10 text-[#00FFC6] animate-bounce">
+    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
 
-<div  class="absolute bottom-10 z-10 text-[#00FFC6] animate-slide-out-bottom animate-delay-1000  animate-iteration-count-infinite">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-        </svg>
-</div>
-
-<!-- Capa oscura opcional para mejorar contraste -->
-<div  class="absolute top-0 left-0 w-full h-full bg-black/50 z-0 animate-pulse"></div>
-
+  <!-- Capa oscura opcional para mejorar contraste -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-0"></div>
 </section>
 
 <!-- Ejecutar Typed.js al montar -->
- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <!-- Setup and start animation! -->
-  <script>
-    // Declare Typed on the Window interface for TypeScript
-    // @ts-ignore
-    window.addEventListener('DOMContentLoaded', function () {
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+  // @ts-ignore
+    if (window.Typed) {
       // @ts-ignore
-      if (window.Typed) {
-        // @ts-ignore
-        var typed = new window.Typed('#hero-text', {
-           strings: [
-            "Revoluciona el mañana, hoy",
-            "Tecnología con propósito",
-            "Soluciones sin límites"
-            ],
-         loop: true,
+      new window.Typed('#hero-text', {
+        strings: [
+          "Revoluciona el mañana, hoy",
+          "Tecnología con propósito",
+          "Soluciones sin límites"
+        ],
+        loop: true,
         typeSpeed: 40,
         showCursor: true,
         cursorChar: "|",
-        });
-      }
-    });
-  </script>
-
+      });
+    }
+  });
+</script>
