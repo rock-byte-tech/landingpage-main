@@ -11,6 +11,12 @@ import 'aos/dist/aos.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Rock Byte Tech</title>
+		<style is:global>
+			/* Aplica el scroll suave a todo el sitio */
+			html {
+				scroll-behavior: smooth !important; /* Use !important to ensure it overrides other settings */
+			}
+		</style>
 	</head>
 	<body class="bg-[#0A0A0A] text-white font-sans scroll-smooth">
 		<slot />
@@ -36,3 +42,5 @@ import 'aos/dist/aos.css';
 		height: 100%;
 	}
 </style>
+
+

@@ -112,6 +112,7 @@ netlify deploy --prod dist/   # ejemplo Netlify CLI
 - [Typed.js](https://mattboldt.github.io/typed.js/)
 - [Vanilla‑Tilt.js](https://micku7zu.github.io/vanilla-tilt.js/)
 - Video comprimido con [HandBrake](https://handbrake.fr/)
+- [Hero Icons](https://heroicons.com)
 
 ---
 
