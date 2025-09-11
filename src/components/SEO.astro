@@ -1,0 +1,47 @@
+---
+const { title = "Rock Byte Tech - Desarrollo Web en Colombia", 
+        description = "Empresa de software en Colombia. Desarrollo web, aplicaciones a la medida, automatización y seguridad informática.", 
+        image = "/logo/logo-principal.webp", 
+        url = "https://rock-byte-tech.com.co" } = Astro.props;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={url} />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" />
+
+
+<script type="application/ld+json">
+{JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rock Byte Tech",
+    "url": "https://rock-byte-tech.com.co",
+    "logo": "https://rock-byte-tech.com.co/logo.png",
+    "sameAs": [
+    "https://www.instagram.com/rock_byte_tech"
+    ],
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+57-300-000-0000",
+    "contactType": "customer service",
+    "areaServed": "CO"
+    }
+    })}
+</script>
+

@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';		
 import Hero from '../components/hero.astro';
 import Services from '../components/services.astro';
-import CallToAction from '../components/callToAction.astro';
 import HowWeDoIt from '../components/howWeDoIt.astro';
 import ChooseUs from '../components/chooseUs.astro';
 import Contact from '../components/contact.astro';
@@ -12,13 +11,22 @@ import Footer from '../components/footer.astro';
 import Faq from '../components/faq.astro';
 ---
 
-<Layout>
+<Layout 
+	title="Servicios de Desarrollo Web - Rock Byte Tech"
+	description="Creamos soluciones web modernas y escalables con Astro, Angular y .NET para empresas en Colombia."
+>
 	<Header />
-	<Hero />
-	<Services />
-	<ChooseUs />
-	<HowWeDoIt />
-	<Faq />
-	<Contact />
+
+	<!-- Contenido principal -->
+	<main>
+		<Hero />
+		<Services />
+		<ChooseUs />
+		<HowWeDoIt />
+		<Faq />
+		<Contact />
+	</main>
+
+	<!-- Fin del contenido principal -->
 	<Footer />
 </Layout>
