@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import 'aos/dist/aos.css';
 import GoogleTag from '../components/google-tags.astro';
+import logoImage from '../assets/logo/logo-principal.webp';
 
 const {
 	title = "Rock Byte Tech - Desarrollo Web en Colombia",
@@ -9,6 +10,34 @@ const {
 	image = "/images/preview.png",
 	url = "https://rock-byte-tech.com.co"
 } = Astro.props;
+
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Rock Byte Tech",
+	"url": "https://rock-byte-tech.com.co/",
+	"logo": new URL(logoImage.src, Astro.site).href,
+	"description": "Agencia de desarrollo de software enfocada en crear soluciones web innovadoras, priorizando la experiencia de usuario y la calidad.",
+	"contactPoint": {
+	"@type": "ContactPoint",
+	"telephone": "+57 3196440848",
+	"contactType": "Customer Service",
+	"email": "contacto@rock-byte-tech.com.co",
+	"areaServed": "CO",
+	"availableLanguage": ["es"]
+	},
+	"address": {
+	"@type": "PostalAddress",
+	"addressLocality": "Copacabana",
+	"addressRegion": "Antioquia",
+	"addressCountry": "CO"
+	},
+	"sameAs": [
+	"https://www.instagram.com/rock_byte_tech"
+	]
+};
+
 ---
 
 <!doctype html>
@@ -38,25 +67,10 @@ const {
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={image} />
 
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
 		<!-- Canonical tag -->
 		<link rel="canonical" href={url} />
-
-		<!-- Datos estructurados JSON-LD -->
-		<script type="application/ld+json">
-		{`
-			{
-				"@context": "https://schema.org",
-				"@type": "Organization",
-				"name": "Rock Byte Tech",
-				"url": "${url}",
-				"logo": "${image}",
-				"description": "${description}",
-				"sameAs": [
-					"https://www.instagram.com/rock_byte_tech",
-				]
-			}
-		`}
-		</script>
 
 		<style is:global>
 			html {
