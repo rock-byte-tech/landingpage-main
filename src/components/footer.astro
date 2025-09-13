@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
+import iconInstagram from '../assets/icons/instagram.webp';
+import iconFacebook from '../assets/icons/facebook.webp';
+import iconWhatsapp from '../assets/icons/whatsapp.webp';
+
 ---
 
 <footer class="bg-gray-950/90 backdrop-blur border-t border-gray-800 text-gray-400 py-16 px-6">
@@ -28,7 +32,20 @@ import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
       </nav>
     </div>
 
-     <!-- poner redes -->
+    <div>
+      <h3 class="font-bold text-white mb-4">Síguenos</h3>
+      <nav class="flex justify-center md:justify-start space-x-4" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/people/Rock-Byte-Tech/61554860069692/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Rock Byte Tech">
+              <Image src={iconFacebook} alt="Facebook Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+            </a>
+            <a href="https://wa.me/573196440848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rock Byte Tech">
+              <Image src={iconWhatsapp} alt="WhatsApp Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+            </a>
+            <a href="https://www.instagram.com/rock_byte_tech" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rock Byte Tech">
+              <Image src={iconInstagram} alt="Instagram Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+            </a>
+      </nav>
+    </div>
 
   </div>
 </footer>

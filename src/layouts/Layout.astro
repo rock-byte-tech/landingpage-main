@@ -57,7 +57,7 @@ const schema = {
 		<!-- Open Graph -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={image} />
+		<meta property="og:image" content="/icon.logo.svg" />
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 
@@ -65,7 +65,7 @@ const schema = {
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={image} />
+		<meta name="twitter:image" content="/icon.logo.svg" />
 
 		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
@@ -90,9 +90,9 @@ const schema = {
 		<script>
 			import AOS from "aos";
 			AOS.init({
-				once: false,        // Para que se animen cada vez que entran en viewport
-				duration: 1000,     // Tiempo de la animación en milisegundos
-				offset: 100         // Cuánto antes empieza la animación
+				once: false,
+				duration: 700,      // Animaciones más rápidas
+				offset: 60          // Empiezan antes en mobile
 			});
 		</script>
 	</body>
