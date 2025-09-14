@@ -4,7 +4,11 @@ import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco-solo-letra
 import backgroundVideoV2 from '../assets/video/background-video-v2-fixed.mp4';
 import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
 ---
-
+<style is:inline> 
+  .typed-cursor {
+  color: #2dd4bf; /* Verde agua */
+}
+</style>
 <section class="animate-fade-in relative pt-24 md:pt-32 min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
 
   <!-- Video de fondo -->
@@ -28,8 +32,10 @@ import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
         alt="Logo principal Rock Byte Tech" 
       />
     </div>
-    <div class="text-lg sm:text-xl md:text-2xl mb-4 md:mb-6 max-w-sm sm:max-w-md md:max-w-2xl text-white">
-      <span id="hero-text"></span>
+    <div class="text-lg sm:text-xl md:text-2xl mb-4 md:mb-6 max-w-sm sm:max-w-md md:max-w-2xl">
+      <div class="relative w-full rounded-lg border border-[#00FFC6] bg-gray-900/50 px-4 py-3 font-mono text-white shadow-lg">
+        <span id="hero-text" class="text-[#00FFC6]"></span>
+      </div>
     </div>
     <p class="text-base sm:text-lg text-gray-300 mb-6 md:mb-8 max-w-sm sm:max-w-md md:max-w-xl px-2" data-aos="fade-up">
       Desarrollo web, software personalizado y soporte de calidad para tu negocio.
@@ -71,9 +77,9 @@ import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
           "Soluciones sin límites"
         ],
         loop: true,
-        typeSpeed: 40,
+        typeSpeed: 50,
         showCursor: true,
-        cursorChar: "|",
+        cursorChar: "▋",
       });
     }
   });
