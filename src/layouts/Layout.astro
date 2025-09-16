@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import 'aos/dist/aos.css';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 import GoogleTag from '../components/google-tags.astro';
 import logoImage from '../assets/logo/logo-principal.webp';
 
@@ -96,6 +97,7 @@ const schema = {
 				offset: 60          // Empiezan antes en mobile
 			});
 		</script>
+		{import.meta.env.PROD && <SpeedInsights />}
 	</body>
 </html>
 
