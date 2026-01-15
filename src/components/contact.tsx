@@ -5,26 +5,26 @@ const copy = {
   eyebrow: "Contacto directo",
   title: "Impulsa tu producto con Rock Byte Tech",
   body:
-    "Somos tu aliado en desarrollo web, automatizacion y software a la medida. Cuentanos el reto y armamos una propuesta clara y ejecutable.",
+    "Somos tu aliado en desarrollo web, automatización y software a la medida. Cuéntanos el reto y armamos una propuesta clara y ejecutable.",
   emailAria: "Enviar correo a Rock Byte Tech",
   brandAria: "Abrir el sitio de Rock Byte Tech",
   brandLabel: "rock-byte-tech.com.co",
-  responseNote: "Respuesta en menos de 24 horas habiles.",
+  responseNote: "Respuesta en menos de 24 horas hábiles.",
   nameLabel: "Nombre",
   namePlaceholder: "Tu nombre completo",
   emailLabel: "Correo",
   emailPlaceholder: "tu@correo.com",
   messageLabel: "Mensaje",
-  messagePlaceholder: "Cuentalos sobre tu proyecto y objetivos",
+  messagePlaceholder: "Cuéntanos sobre tu proyecto y objetivos",
   formAria: "Formulario de contacto",
   submit: "Enviar mensaje",
   submitting: "Enviando...",
   successMessage: "Gracias por escribir a Rock Byte Tech. Te responderemos muy pronto.",
   submitError: "No pudimos enviar tu mensaje. Intenta nuevamente.",
-  submitErrorFallback: "Ocurrio un error inesperado. Intenta nuevamente.",
+  submitErrorFallback: "Ocurrió un error inesperado. Intenta nuevamente.",
   errors: {
     nameRequired: "El nombre es obligatorio.",
-    emailInvalid: "Ingresa un correo valido.",
+    emailInvalid: "Ingresa un correo válido.",
     messageRequired: "El mensaje es obligatorio."
   }
 };
@@ -83,14 +83,15 @@ export default function ContactSection() {
 
   return (
     <section
-      className="py-16 md:py-24 bg-gradient-to-br from-[#111] via-[#1a1a1a] to-[#232323] border-t-2 border-[#00FFC6]/30"
+      className="relative py-20 md:py-28 bg-gradient-to-br from-[#0b0b0b] via-[#111] to-[#1a1a1a] border-t border-white/5"
       id="contacto"
       aria-labelledby="contact-title"
     >
-      <div className="max-w-5xl mx-auto px-4" data-aos="fade-up">
-        <div className="rounded-2xl border border-[#00FFC6]/20 bg-black/40 p-8 md:p-10 shadow-[0_0_30px_rgba(0,255,198,0.08)] grid md:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,255,198,0.08),_transparent_45%)]"></div>
+      <div className="relative max-w-5xl mx-auto px-4" data-aos="fade-up">
+        <div className="rounded-2xl border border-white/10 bg-black/50 p-8 md:p-10 shadow-[0_0_35px_rgba(0,255,198,0.12)] grid md:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00FFC6]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#00FFC6]/80">
               {copy.eyebrow}
             </p>
             <h2 id="contact-title" className="text-2xl md:text-3xl font-bold text-white">
@@ -100,18 +101,18 @@ export default function ContactSection() {
             <ul className="space-y-2 text-sm text-gray-300">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#00FFC6]" aria-hidden="true"></span>
-                Respuesta clara en menos de 24 horas habiles.
+                Respuesta clara en menos de 24 horas hábiles.
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#00FFC6]" aria-hidden="true"></span>
-                Propuesta con alcance, tiempos y tecnologia recomendada.
+                Propuesta con alcance, tiempos y tecnología recomendada.
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-[#00FFC6]" aria-hidden="true"></span>
-                Acompanamiento tecnico durante la ejecucion.
+                Acompañamiento técnico durante la ejecución.
               </li>
             </ul>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="https://wa.me/573196440848?text=Estoy%20interesad%40%20en%20adquirir%20uno%20de%20sus%20servicios"
                 target="_blank"

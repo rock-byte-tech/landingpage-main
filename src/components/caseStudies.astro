@@ -58,25 +58,26 @@ const caseStudies = [
 ];
 ---
 
-<section class="px-6 bg-black border-t border-white/5" id="casos-exito">
-  <div class="py-24 sm:py-32">
+<section class="relative px-6 bg-black border-t border-white/5" id="casos-exito">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,255,198,0.06),_transparent_45%)]"></div>
+  <div class="relative py-24 sm:py-32">
     <div class="mx-auto max-w-6xl">
       <div class="flex items-center justify-center gap-2 text-[#00FFC6]/80 text-xs uppercase tracking-[0.3em] font-semibold" data-aos="fade-up">
         <span class="h-px w-8 bg-[#00FFC6]/50"></span>
-        Casos de exito
+        Casos de éxito
         <span class="h-px w-8 bg-[#00FFC6]/50"></span>
       </div>
       <h2 class="mt-4 text-center text-4xl sm:text-5xl font-semibold text-white" data-aos="fade-up">
         Resultados reales en proyectos reales
       </h2>
       <p class="mx-auto mt-4 max-w-2xl text-center text-gray-300" data-aos="fade-up" data-aos-delay="50">
-        Cada caso refleja una necesidad concreta, una solucion clara y un impacto medible en la operacion del cliente.
+        Cada caso refleja una necesidad concreta, una solución clara y un impacto medible en la operación del cliente.
       </p>
 
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
         {caseStudies.map((item, index) => (
           <article
-            class="relative rounded-2xl border border-white/10 bg-[#0b0b0b] p-6 shadow-[0_0_30px_rgba(0,255,198,0.08)]"
+            class={`relative rounded-2xl border ${item.featured ? "border-[#00FFC6]/40" : "border-white/10"} bg-[#0b0b0b] p-6 shadow-[0_0_30px_rgba(0,255,198,0.08)]`}
             data-aos="fade-up"
             data-aos-delay={100 + index * 50}
           >
@@ -87,7 +88,7 @@ const caseStudies = [
                 <p class="mt-2 text-sm text-gray-400">{item.role}</p>
               </div>
               {item.featured && (
-                <span class="rounded-full border border-[#00FFC6]/40 px-3 py-1 text-xs text-[#00FFC6]">
+                <span class="rounded-full border border-[#00FFC6]/50 px-3 py-1 text-xs text-[#00FFC6]">
                   Destacado
                 </span>
               )}
@@ -104,7 +105,7 @@ const caseStudies = [
                 <strong class="text-white">Reto:</strong> {item.problem}
               </p>
               <p>
-                <strong class="text-white">Solucion:</strong> {item.solution}
+                <strong class="text-white">Solución:</strong> {item.solution}
               </p>
               <p>
                 <strong class="text-white">Resultado:</strong> {item.result}
@@ -126,7 +127,9 @@ const caseStudies = [
                   {item.corporateExperience ? "Confidencial" : "En desarrollo"}
                 </span>
               )}
-              <span class="text-xs text-gray-500">{item.corporateExperience ? "Experiencia corporativa" : "Proyecto independiente"}</span>
+              <span class="text-xs text-gray-500">
+                {item.corporateExperience ? "Experiencia corporativa" : "Proyecto independiente"}
+              </span>
             </div>
           </article>
         ))}

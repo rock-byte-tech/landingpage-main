@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: "Falta configuracion del API key." }), {
+    return new Response(JSON.stringify({ error: "Falta configuración del API key." }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
