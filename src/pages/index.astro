@@ -4,12 +4,13 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';		
 import Hero from '../components/hero.astro';
 import Services from '../components/services.astro';
+import CaseStudies from '../components/caseStudies.astro';
 import HowWeDoIt from '../components/howWeDoIt.astro';
 import ChooseUs from '../components/chooseUs.astro';
-import Contact from '../components/contact.astro';
+import Contact from '../components/contact';
 import Footer from '../components/footer.astro';
 import Faq from '../components/faq.astro';
-import InstagramFloat from '../components/InstagramFloat.astro';
+import InstagramFloat from '../components/floatingButtons.astro';
 ---
 
 <Layout 
@@ -22,10 +23,11 @@ import InstagramFloat from '../components/InstagramFloat.astro';
 	<main>
 		<Hero />
 		<Services />
+		<CaseStudies />
 		<ChooseUs />
 		<HowWeDoIt />
 		<Faq />
-		<Contact />
+		<Contact client:idle />
 	</main>
 	<InstagramFloat />
 	<!-- Fin del contenido principal -->

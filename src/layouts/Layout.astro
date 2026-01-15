@@ -13,7 +13,7 @@ const {
 } = Astro.props;
 
 
-const schema = {
+const schemaOrganization = {
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"name": "Rock Byte Tech",
@@ -39,6 +39,15 @@ const schema = {
 	]
 };
 
+const schemaWebsite = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Rock Byte Tech",
+	"url": "https://rock-byte-tech.com.co/"
+};
+
+const schemas = [schemaOrganization, schemaWebsite];
+
 ---
 
 <!doctype html>
@@ -48,18 +57,25 @@ const schema = {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+		<link rel="preconnect" href="https://unpkg.com" />
 
 		<!-- SEO -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="author" content="Rock Byte Tech" />
+		<meta name="language" content="es" />
 		<meta name="robots" content="index, follow" />
 		<meta name="keywords" content="desarrollo web, desarrollo web Colombia, software a la medida, automatización, Rock Byte Tech" />
+		<meta name="theme-color" content="#00FFC6" />
 
 		<!-- Open Graph -->
 		<meta property="og:title" content={title} />
 		<meta property="og:site_name" content="Rock Byte Tech">
+		<meta property="og:locale" content="es_CO" />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="https://rock-byte-tech.com.co/icon-logo.svg" />
+		<meta property="og:image:alt" content="Logo de Rock Byte Tech" />
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 
@@ -69,10 +85,11 @@ const schema = {
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content="https://rock-byte-tech.com.co/icon-logo.svg" />
 
-		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(schemas)} />
 
 		<!-- Canonical tag -->
 		<link rel="canonical" href={url} />
+		<link rel="alternate" hreflang="es-CO" href={url} />
 
 		<style is:global>
 			html {

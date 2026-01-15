@@ -1,51 +1,49 @@
 ---
-import { Image } from 'astro:assets';
-import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
-import iconInstagram from '../assets/icons/instagram.webp';
-import iconFacebook from '../assets/icons/facebook.webp';
-import iconWhatsapp from '../assets/icons/whatsapp.webp';
-
+import { Image } from "astro:assets";
+import logoPrincipalBlanco from "../assets/logo/logo-principal-blanco.webp";
+import iconInstagram from "../assets/icons/instagram.webp";
+import iconFacebook from "../assets/icons/facebook.webp";
+import iconWhatsapp from "../assets/icons/whatsapp.webp";
 ---
 
 <footer class="bg-gray-950/90 backdrop-blur border-t border-gray-800 text-gray-400 py-16 px-6">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-    
     <div class="flex flex-col items-center md:items-start space-y-4">
       <a href="/" aria-label="Volver al inicio">
         <Image class="h-10 w-auto" src={logoPrincipalBlanco} alt="Logo de Rock Byte Tech" />
       </a>
       <p class="text-sm max-w-sm">
-        Construimos experiencias digitales únicas y potentes para tu marca. Desde el código hasta el diseño, tu éxito es nuestra meta.
+        Construimos experiencias digitales unicas y potentes para tu marca. Desde el codigo hasta el diseno, tu exito es nuestra meta.
       </p>
       <p class="text-sm mt-4">
-        &copy; 2025 Rock Byte Tech. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} Rock Byte Tech. Todos los derechos reservados.
       </p>
     </div>
 
     <div>
-      <h3 class="font-bold text-white mb-4">Enlaces Rápidos</h3>
+      <h3 class="font-bold text-white mb-4">Enlaces rapidos</h3>
       <nav class="flex flex-col space-y-2">
         <a href="#servicios" class="hover:text-[#00FFC6] transition">Servicios</a>
+        <a href="#casos-exito" class="hover:text-[#00FFC6] transition">Casos de exito</a>
         <a href="#por-que" class="hover:text-[#00FFC6] transition">¿Por qué elegirnos?</a>
-        <a href="#proceso" class="hover:text-[#00FFC6] transition">Cómo lo Hacemos</a>
-        <a href="#contacto" class="hover:text-[#00FFC6] transition">Contáctanos</a>
+        <a href="#proceso" class="hover:text-[#00FFC6] transition">Como lo hacemos</a>
+        <a href="#contacto" class="hover:text-[#00FFC6] transition">Contactanos</a>
       </nav>
     </div>
 
     <div>
-      <h3 class="font-bold text-white mb-4">Síguenos</h3>
+      <h3 class="font-bold text-white mb-4">Siguenos</h3>
       <nav class="flex justify-center md:justify-start space-x-4" aria-label="Redes sociales">
-            <a href="https://www.facebook.com/people/Rock-Byte-Tech/61554860069692/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Rock Byte Tech">
-              <Image src={iconFacebook} alt="Facebook Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
-            </a>
-            <a href="https://wa.me/573196440848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rock Byte Tech">
-              <Image src={iconWhatsapp} alt="WhatsApp Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
-            </a>
-            <a href="https://www.instagram.com/rock_byte_tech" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rock Byte Tech">
-              <Image src={iconInstagram} alt="Instagram Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
-            </a>
+        <a href="https://www.facebook.com/people/Rock-Byte-Tech/61554860069692/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Rock Byte Tech">
+          <Image src={iconFacebook} alt="Facebook Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+        </a>
+        <a href="https://wa.me/573196440848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rock Byte Tech">
+          <Image src={iconWhatsapp} alt="WhatsApp Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+        </a>
+        <a href="https://www.instagram.com/rock_byte_tech" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rock Byte Tech">
+          <Image src={iconInstagram} alt="Instagram Rock Byte Tech" class="h-6 w-6 inline transition duration-300 hover:opacity-80 hover:drop-shadow-[0_0_8px_white]" />
+        </a>
       </nav>
     </div>
-
   </div>
 </footer>

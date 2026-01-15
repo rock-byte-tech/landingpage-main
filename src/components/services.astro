@@ -1,7 +1,6 @@
 ---
 import GeneralServiciosWeb from "../assets/general/img-service-web.webp";
 import GeneralServiciosWebApp from "../assets/general/img-service-web-app.webp";
-
 import GeneralServiciosSecurity from "../assets/general/img-service-security.webp";
 import { Image } from "astro:assets";
 
@@ -41,64 +40,100 @@ const datosJsonEjemplo = {
 };
 ---
 
-<section class="px-6 bg-[#111]" id="servicios">
-  <div class="bg-[#111] py-24 sm:py-32 overflow-x-hidden">
+<section class="px-6 bg-gradient-to-b from-black via-[#0b0b0b] to-[#111] border-t border-white/5" id="servicios">
+  <div class="py-24 sm:py-32 overflow-x-hidden">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-center text-base/7 font-semibold font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#00FFC6] via-[#00FFC6] to-white drop-shadow-[0_0_8px_#00FFC6] flex items-center justify-center gap-2" data-aos="fade-up">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#00FFC6]">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
-        </svg>
+      <div class="flex items-center justify-center gap-2 text-[#00FFC6]/80 text-xs uppercase tracking-[0.3em] font-semibold" data-aos="fade-up">
+        <span class="h-px w-8 bg-[#00FFC6]/50"></span>
         Servicios
-      </h2>
-      <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl" data-aos="fade-up" data-aos-delay="50">¿Qué hacemos?</p>
-      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-        <div class="relative lg:row-span-2" data-aos="fade-right" data-aos-delay="100">
-          <div class="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl border border-gray-700"></div>
-            <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Desarrollo Web</p>
-                <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Creamos páginas web a la medida: desde landing pages hasta portales completos, con tecnologías modernas como WordPress, Astro, Angular y .NET, entre otras.</p>
-              </div>
-              <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                  <Image class="size-full object-cover object-top " src={GeneralServiciosWeb} alt="imagen desarrollo web" loading="lazy" />
-                </div>
+        <span class="h-px w-8 bg-[#00FFC6]/50"></span>
+      </div>
+      <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl" data-aos="fade-up" data-aos-delay="50">
+        ¿Qué hacemos?
+      </p>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base text-gray-300" data-aos="fade-up" data-aos-delay="100">
+        Construimos experiencias digitales con foco en performance, seguridad y resultados. Elegimos tecnologia segun tu objetivo, no segun la moda.
+      </p>
+
+      <div class="mt-10 grid gap-6 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div class="relative lg:row-span-2 group" data-aos="fade-right" data-aos-delay="100">
+          <div class="absolute inset-px rounded-2xl bg-gray-800/90 lg:rounded-l-4xl border border-gray-700/70 shadow-[0_0_30px_rgba(0,255,198,0.06)]"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Desarrollo Web</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                Landings, portales y sitios corporativos con foco en conversion y velocidad. Stack moderno: Astro, Angular, .NET y WordPress.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs text-[#00FFC6] max-lg:justify-center">
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">UX/UI</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">SEO tecnico</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Performance</span>
               </div>
             </div>
-            <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl"></div>
+            <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+              <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl group-hover:shadow-[0_0_30px_rgba(0,255,198,0.2)] transition">
+                <Image class="size-full object-cover object-top" src={GeneralServiciosWeb} alt="imagen desarrollo web" loading="lazy" />
+              </div>
+            </div>
           </div>
-        <div class="relative max-lg:row-start-1" data-aos="fade-left" data-aos-delay="200">
-          <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl border border-gray-700"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl"></div>
+        </div>
+
+        <div class="relative max-lg:row-start-1 group" data-aos="fade-left" data-aos-delay="200">
+          <div class="absolute inset-px rounded-2xl bg-gray-800/90 max-lg:rounded-t-4xl border border-gray-700/70 shadow-[0_0_30px_rgba(0,255,198,0.05)]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
               <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Apps a Medida</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Desarrollamos aplicaciones personalizadas con un backend confiable y conexión a APIs, diseñadas para que tu negocio funcione de manera eficiente.</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                Aplicaciones a medida con backend robusto, integraciones y dashboards listos para operacion.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs text-[#00FFC6] max-lg:justify-center">
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">APIs</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Escalabilidad</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Soporte</span>
+              </div>
             </div>
             <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-              <Image class="w-full max-lg:max-w-xs rounded-lg" src={GeneralServiciosWebApp} alt="imagen desarrollo web a la medida" loading="lazy" />
+              <Image class="w-full max-lg:max-w-xs rounded-lg group-hover:scale-[1.02] transition" src={GeneralServiciosWebApp} alt="imagen desarrollo web a la medida" loading="lazy" />
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm o utline outline-black/5 max-lg:rounded-t-4xl"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-t-4xl"></div>
         </div>
-        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2" data-aos="fade-up" data-aos-delay="300">
-          <div class="absolute inset-px rounded-lg bg-gray-800 border border-gray-700"></div>
+
+        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute inset-px rounded-2xl bg-gray-800/90 border border-gray-700/70 shadow-[0_0_30px_rgba(0,255,198,0.05)]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
               <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Seguridad e Infraestructura</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Hosting, backups, configuración segura y soporte técnico.</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                Hosting, backups, monitoreo y configuracion segura para que tu plataforma no se detenga.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs text-[#00FFC6] max-lg:justify-center">
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">DevOps</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Backups</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Soporte</span>
+              </div>
             </div>
             <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-              <Image class="h-[min(152px,40cqw)] object-cover bg-gray-500 rounded-lg" src={GeneralServiciosSecurity}  loading="lazy" alt="imagen seguridad" />
+              <Image class="h-[min(152px,40cqw)] object-cover bg-gray-500 rounded-lg group-hover:scale-[1.02] transition" src={GeneralServiciosSecurity} loading="lazy" alt="imagen seguridad" />
             </div>
           </div>
           <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5"></div>
         </div>
-        <div class="relative lg:row-span-2" data-aos="fade-left" data-aos-delay="400">
-          <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl border border-gray-700"></div>
+
+        <div class="relative lg:row-span-2 group" data-aos="fade-left" data-aos-delay="400">
+          <div class="absolute inset-px rounded-2xl bg-gray-800/90 max-lg:rounded-b-4xl lg:rounded-r-4xl border border-gray-700/70 shadow-[0_0_30px_rgba(0,255,198,0.06)]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
             <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Automatización</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Optimizamos tus procesos con flujos automáticos, integrando tus sistemas mediante n8n para que tu negocio gane eficiencia y ahorro de tiempo.</p>
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Automatizacion</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                Optimizamos procesos con flujos automaticos e integraciones n8n para reducir costos y tiempos operativos.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs text-[#00FFC6] max-lg:justify-center">
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">n8n</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Integraciones</span>
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">Ahorro</span>
+              </div>
             </div>
             <div class="relative min-h-120 w-full grow">
               <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl outline outline-white/10">
@@ -108,8 +143,8 @@ const datosJsonEjemplo = {
                     <div class="border-r border-gray-600/10 px-4 py-2">Notification.json</div>
                   </div>
                 </div>
-                <div class="px-6 pt-6 pb-14">
-                  <pre>{ JSON.stringify(datosJsonEjemplo, null, 2) }</pre>
+                <div class="px-6 pt-6 pb-14 text-xs text-gray-300">
+                  <pre>{JSON.stringify(datosJsonEjemplo, null, 2)}</pre>
                 </div>
               </div>
             </div>
@@ -117,6 +152,6 @@ const datosJsonEjemplo = {
           <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
         </div>
       </div>
+    </div>
   </div>
-</div>
 </section>

@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import iconInstagram from '../assets/icons/instagram.webp';
+import iconWhatsapp from '../assets/icons/whatsapp.webp';
+---
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-4">
+    <a href="https://calendly.com/devops-rbt" target="_blank" rel="noopener noreferrer" aria-label="Agenda una reunion en Calendly"
+        class="bg-[#363636] rounded-full p-3 shadow-lg hover:drop-shadow-[0_0_12px_#00FFC6] transition duration-300 flex items-center justify-center hover:animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#00FFC6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V4m8 3V4m-9 7h10m-11 9h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2Z" />
+        </svg>
+    </a>
+
+    <a href="https://wa.me/573196440848?text=Estoy%20interesad%40%20en%20adquirir%20uno%20de%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rock Byte Tech"
+        class="bg-[#363636] rounded-full p-3 shadow-lg hover:drop-shadow-[0_0_12px_#00FFC6] transition duration-300 flex items-center justify-center hover:animate-bounce">
+        <Image src={iconWhatsapp} alt="WhatsApp Rock Byte Tech" class="h-8 w-8" />
+    </a>
+
+    <a href="https://www.instagram.com/rock_byte_tech" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rock Byte Tech"
+        class="bg-[#363636] rounded-full p-3 shadow-lg hover:drop-shadow-[0_0_12px_white] transition duration-300 flex items-center justify-center hover:animate-bounce">
+        <Image src={iconInstagram} alt="Instagram Rock Byte Tech" class="h-8 w-8" />
+    </a>
+</div>

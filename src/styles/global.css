@@ -5,3 +5,75 @@ p, a, h1, h2, h3, h4, h5, h6 {
     font-family: monospace;
     font-weight: bold;
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #00FFC6;
+    outline-offset: 2px;
+}
+
+.dev-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.18) 1px, transparent 0);
+    background-size: 28px 28px;
+}
+
+.dev-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 24px 60px -32px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: #f8fafc;
+    font-weight: 700;
+    padding: 0.75rem 1.25rem;
+    transition: transform 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px -16px rgba(37, 99, 235, 0.8);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    transition: color 200ms ease, border-color 200ms ease, background 200ms ease;
+}
+
+.btn-outline:hover {
+    border-color: rgba(56, 189, 248, 1);
+    color: #ffffff;
+    background: rgba(56, 189, 248, 0.15);
+}

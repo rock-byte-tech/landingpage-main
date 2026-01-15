@@ -17,7 +17,7 @@ import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
     muted 
     loop 
     playsinline 
-    preload="auto"
+    preload="metadata"
     class="absolute top-0 left-0 w-full h-full object-cover z-0">
     <source src={backgroundVideoV2} type="video/mp4" />
     Tu navegador no soporta videos HTML5.
@@ -25,6 +25,7 @@ import { URL_CALENDLY, CTA_LLAMADA } from '../const/constants.js';
 
   <!-- Contenido encima del video -->
   <div class="relative z-10" data-tilt data-tilt-reset="true" data-tilt-scale="1.05">
+    <h1 class="sr-only">Rock Byte Tech - Desarrollo Web y Software a Medida</h1>
     <div class="mb-6 md:mb-8 flex justify-center" data-aos="fade-down">
       <Image 
         class="h-28 w-auto md:h-48" 

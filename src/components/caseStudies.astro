@@ -1,0 +1,136 @@
+---
+const caseStudies = [
+  {
+    name: "Jerseytex",
+    featured: true,
+    corporateExperience: false,
+    url: "https://jerseytex.com.co",
+    role: "Arquitectura y soporte e-commerce WordPress",
+    tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "Linux"],
+    problem:
+      "La operación digital estaba limitada por una infraestructura obsoleta que encarecía el mantenimiento del e-commerce.",
+    solution:
+      "Migración a stack WordPress/WooCommerce en hosting Linux, optimizando arquitectura, seguridad y performance. Soporte técnico continuo durante 6 meses para asegurar estabilidad.",
+    result:
+      "Reducción de costos de infraestructura y operación del e-commerce, con mayor estabilidad y soporte garantizado."
+  },
+  {
+    name: "Orluz",
+    featured: true,
+    corporateExperience: false,
+    url: "https://orluz.com.co/",
+    role: "Diseño y desarrollo e-commerce WordPress",
+    tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "Linux"],
+    problem:
+      "La empresa no tenía presencia en línea ni canal de ventas digital.",
+    solution:
+      "Diseño desde cero de e-commerce y presencia online con WordPress/WooCommerce en hosting Linux, incluyendo UX, configuración de catálogo y optimización de performance/seguridad.",
+    result:
+      "Lanzamiento del primer canal digital de la marca, habilitando ventas y posicionamiento en línea."
+  },
+  {
+    name: "Trade Way Shop",
+    featured: false,
+    corporateExperience: false,
+    url: "#",
+    role: "Arquitectura headless y desarrollo",
+    tech: ["Headless", "Astro", "WordPress", "WooCommerce"],
+    problem:
+      "Necesitaban un e-commerce para importaciones con foco en flexibilidad y escalabilidad.",
+    solution:
+      "Proyecto desde cero con arquitectura headless para integraciones y catálogos dinámicos.",
+    result: "En desarrollo (coming soon)."
+  },
+  {
+    name: "Consultoría técnica (cliente confidencial)",
+    featured: false,
+    corporateExperience: true,
+    url: "#",
+    role: "Consultor técnico",
+    tech: [".NET", "Angular", "Arquitectura", "DevOps"],
+    problem:
+      "Empresa (confidencial) requería revisión de arquitectura y plan de modernización.",
+    solution:
+      "Consultoría para evaluar arquitectura, definir roadmap y recomendaciones de modernización sin mencionar al cliente.",
+    result:
+      "Plan de modernización aprobado y guía de implementación técnica."
+  }
+];
+---
+
+<section class="px-6 bg-black border-t border-white/5" id="casos-exito">
+  <div class="py-24 sm:py-32">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex items-center justify-center gap-2 text-[#00FFC6]/80 text-xs uppercase tracking-[0.3em] font-semibold" data-aos="fade-up">
+        <span class="h-px w-8 bg-[#00FFC6]/50"></span>
+        Casos de exito
+        <span class="h-px w-8 bg-[#00FFC6]/50"></span>
+      </div>
+      <h2 class="mt-4 text-center text-4xl sm:text-5xl font-semibold text-white" data-aos="fade-up">
+        Resultados reales en proyectos reales
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-gray-300" data-aos="fade-up" data-aos-delay="50">
+        Cada caso refleja una necesidad concreta, una solucion clara y un impacto medible en la operacion del cliente.
+      </p>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
+        {caseStudies.map((item, index) => (
+          <article
+            class="relative rounded-2xl border border-white/10 bg-[#0b0b0b] p-6 shadow-[0_0_30px_rgba(0,255,198,0.08)]"
+            data-aos="fade-up"
+            data-aos-delay={100 + index * 50}
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-[#00FFC6]/70">Caso</p>
+                <h3 class="mt-2 text-2xl font-semibold text-white">{item.name}</h3>
+                <p class="mt-2 text-sm text-gray-400">{item.role}</p>
+              </div>
+              {item.featured && (
+                <span class="rounded-full border border-[#00FFC6]/40 px-3 py-1 text-xs text-[#00FFC6]">
+                  Destacado
+                </span>
+              )}
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-xs text-[#00FFC6]">
+              {item.tech.map((tech) => (
+                <span class="rounded-full border border-[#00FFC6]/30 px-3 py-1">{tech}</span>
+              ))}
+            </div>
+
+            <div class="mt-5 space-y-3 text-sm text-gray-300">
+              <p>
+                <strong class="text-white">Reto:</strong> {item.problem}
+              </p>
+              <p>
+                <strong class="text-white">Solucion:</strong> {item.solution}
+              </p>
+              <p>
+                <strong class="text-white">Resultado:</strong> {item.result}
+              </p>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between text-sm">
+              {item.url !== "#" ? (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[#00FFC6] hover:text-white transition"
+                >
+                  Ver sitio
+                </a>
+              ) : (
+                <span class="text-gray-500">
+                  {item.corporateExperience ? "Confidencial" : "En desarrollo"}
+                </span>
+              )}
+              <span class="text-xs text-gray-500">{item.corporateExperience ? "Experiencia corporativa" : "Proyecto independiente"}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

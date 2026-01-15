@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
-import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
+import { Image } from "astro:assets";
+import logoPrincipalBlanco from "../assets/logo/logo-principal-blanco.webp";
 ---
 
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-black/30 border-b border-white/10">
@@ -11,15 +11,16 @@ import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
 
     <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
       <a href="#servicios" class="text-white hover:text-[#00FFC6] transition">Servicios</a>
+      <a href="#casos-exito" class="text-white hover:text-[#00FFC6] transition">Casos de exito</a>
       <a href="#por-que" class="text-white hover:text-[#00FFC6] transition">¿Por qué elegirnos?</a>
-      <a href="#proceso" class="text-white hover:text-[#00FFC6] transition">Cómo lo Hacemos</a>
+      <a href="#proceso" class="text-white hover:text-[#00FFC6] transition">Como lo hacemos</a>
       <a href="#faq" class="text-white hover:text-[#00FFC6] transition">FAQ</a>
-      <a href="#contacto" data-tilt data-tilt-scale="1.1" class="bg-[#00FFC6] text-black px-4 py-2 rounded-lg hover:bg-white transition">Contáctanos</a>
+      <a href="#contacto" data-tilt data-tilt-scale="1.1" class="bg-[#00FFC6] text-black px-4 py-2 rounded-lg hover:bg-white transition">Contactanos</a>
     </nav>
 
     <div class="md:hidden">
       <button id="menu-btn" type="button" class="z-50 p-2 text-white hover:text-[#00FFC6] relative" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="sr-only">Abrir menú principal</span>
+        <span class="sr-only">Abrir menu principal</span>
         <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -33,49 +34,42 @@ import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
   <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full min-h-screen bg-gray-950/95 backdrop-blur-lg">
     <nav class="flex flex-col items-center justify-center h-screen space-y-8 text-xl">
       <a href="#servicios" class="text-white hover:text-[#00FFC6] transition menu-link">Servicios</a>
+      <a href="#casos-exito" class="text-white hover:text-[#00FFC6] transition menu-link">Casos de exito</a>
       <a href="#por-que" class="text-white hover:text-[#00FFC6] transition menu-link">¿Por qué elegirnos?</a>
-      <a href="#proceso" class="text-white hover:text-[#00FFC6] transition menu-link">Cómo lo Hacemos</a>
+      <a href="#proceso" class="text-white hover:text-[#00FFC6] transition menu-link">Como lo hacemos</a>
       <a href="#faq" class="text-white hover:text-[#00FFC6] transition menu-link">FAQ</a>
-      <a href="#contacto" class="bg-[#00FFC6] text-black px-6 py-3 rounded-lg hover:bg-white transition menu-link">Contáctanos</a>
+      <a href="#contacto" class="bg-[#00FFC6] text-black px-6 py-3 rounded-lg hover:bg-white transition menu-link">Contactanos</a>
     </nav>
   </div>
 </header>
 
 <script>
-  'use strict';
+  "use strict";
 
-  // 1. Definir todos los elementos necesarios
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIconOpen = document.getElementById('menu-icon-open');
-  const menuIconClose = document.getElementById('menu-icon-close');
-  const menuLinks = document.querySelectorAll('.menu-link');
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIconOpen = document.getElementById("menu-icon-open");
+  const menuIconClose = document.getElementById("menu-icon-close");
+  const menuLinks = document.querySelectorAll(".menu-link");
 
-  // 2. Verificación única: Si falta un elemento CRÍTICO, no hacer nada.
   if (!menuBtn || !mobileMenu || !menuIconOpen || !menuIconClose) {
-    console.warn('Advertencia: Faltan elementos del menú móvil en el DOM. El script no se ejecutará.');
+    console.warn("Advertencia: Faltan elementos del menu movil en el DOM. El script no se ejecutara.");
   } else {
     const toggleMenu = () => {
-      mobileMenu.classList.toggle('hidden');
-      menuIconOpen.classList.toggle('hidden');
-      menuIconClose.classList.toggle('hidden');
-      
-      const isHidden = mobileMenu.classList.contains('hidden');
-      
-      // Evitar scroll en el body cuando el menú está abierto
-      document.body.style.overflow = isHidden ? 'auto' : 'hidden';
+      mobileMenu.classList.toggle("hidden");
+      menuIconOpen.classList.toggle("hidden");
+      menuIconClose.classList.toggle("hidden");
 
-      // Actualizar el estado ARIA para accesibilidad
-      menuBtn.setAttribute('aria-expanded', (!isHidden).toString());
+      const isHidden = mobileMenu.classList.contains("hidden");
+      document.body.style.overflow = isHidden ? "auto" : "hidden";
+      menuBtn.setAttribute("aria-expanded", (!isHidden).toString());
     };
 
-    // 3. Asignar los listeners si todo está correcto
-    menuBtn.addEventListener('click', toggleMenu);
+    menuBtn.addEventListener("click", toggleMenu);
 
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        // Solo llamar a toggleMenu si el menú está visible
-        if (!mobileMenu.classList.contains('hidden')) {
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!mobileMenu.classList.contains("hidden")) {
           toggleMenu();
         }
       });
@@ -86,6 +80,6 @@ import logoPrincipalBlanco from '../assets/logo/logo-principal-blanco.webp';
 <style is:global>
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Ajusta este valor al alto de tu header para que no tape los títulos */
+    scroll-padding-top: 100px;
   }
 </style>
